@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Genero {
 
     public String nombre;
-    private int cantidadSeries;
-    private ArrayList<Object> series;
+    private int cantidadSeries=0;
+    private ArrayList<String> series=new ArrayList<String>();
     private int[] cantidadXPuntuacion=new int[10];
 
     public Genero(String nombre) {

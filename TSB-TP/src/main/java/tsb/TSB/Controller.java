@@ -5,12 +5,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 
+import java.io.FileNotFoundException;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Set;
 
 public class Controller {
 
-    private HashMap<String,Genero> tabla;
+    private Hashtable<String,Genero> tabla;
    @FXML
    private ChoiceBox choiceMostrar;
     @FXML
@@ -53,13 +55,16 @@ public class Controller {
     {
 
         HashMap<String,Genero> tabla1 =new HashMap<String,Genero>();
-        Genero g1 = new Genero();
-        g1.nombre="a1";
-        Genero g2 = new Genero();
-        g2.nombre="a2";
-        tabla1.put("minecraft",g1);
-        tabla1.put("Skrillex",g2);
-        this.tabla=tabla1;
+        Reader reader = new Reader();
+        try
+        {
+            this.tabla=reader.LlenarHash("hola");
+        }
+        catch (FileNotFoundException f)
+        {
+            System.out.println(f.getMessage());
+        }
+
     }
 
 }
