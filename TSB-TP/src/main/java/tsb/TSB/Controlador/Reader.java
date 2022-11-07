@@ -8,9 +8,9 @@ public class Reader {
     public Reader(){
     }
 
-    public Hashtable<String,Genero> LlenarHash(String nombre) throws FileNotFoundException {
+    public TSBHashtableDA<String,Genero> LlenarHash(String nombre) throws FileNotFoundException {
         Scanner arch = new Scanner(new File("series_data_clean.csv"));
-        Hashtable<String,Genero> tabla = new Hashtable<String,Genero>();
+        TSBHashtableDA<String,Genero> tabla = new TSBHashtableDA<String,Genero>();
         arch.useDelimiter("[\\n\\r\\,;]+");
         String [] listaGeneros = new String[3];
         arch.nextLine();

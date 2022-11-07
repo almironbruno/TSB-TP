@@ -23,7 +23,7 @@ import javafx.stage.Stage;
 
 public class Controller {
 
-    private Hashtable<String,Genero> tabla;
+    private TSBHashtableDA<String,Genero> tabla;
     @FXML
     private ChoiceBox choiceMostrar;
     @FXML
