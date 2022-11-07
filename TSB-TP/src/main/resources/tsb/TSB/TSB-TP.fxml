@@ -3,11 +3,21 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <VBox alignment="TOP_CENTER" prefHeight="336.0" prefWidth="532.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tsb.TSB.Controller">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <HBox alignment="CENTER" prefHeight="35.0" prefWidth="492.0">
+      <children>
+         <Label text="Programa TSB-TP">
+            <font>
+               <Font size="26.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
       <children>
          <VBox prefHeight="100.0" prefWidth="363.0">
@@ -49,16 +59,6 @@
          </VBox>
       </children>
    </HBox>
-   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-      <children>
-         <TableView prefHeight="100.0" prefWidth="516.0">
-           <columns>
-             <TableColumn prefWidth="75.0" text="C1" />
-             <TableColumn prefWidth="75.0" text="C2" />
-           </columns>
-         </TableView>
-      </children>
-   </HBox>
+   <HBox fx:id="HboxMostrar" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" />
 
-    <Label fx:id="welcomeText" />
 </VBox>

@@ -2,7 +2,14 @@ package tsb.TSB;
 
 public class Serie {
 
-    private String titulo;
-    private int[] añosEmision=new int[2];
+    public String titulo;
+    public Serie(String titulo)
+    {
+        this.titulo=titulo;
 
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
 }

@@ -14,25 +14,24 @@ public class Reader {
         arch.useDelimiter("[\\n\\r\\,;]+");
         String [] listaGeneros = new String[3];
         arch.nextLine();
-        int c=0;
         while (arch.hasNextLine()) {
             String linea = arch.nextLine();
             String[] datos = linea.split("\\,");
-            String titulo = datos[0];System.out.println(titulo);
-            String anio = datos[1];System.out.println(anio);
+            String titulo = datos[0];
+            String anio = datos[1];
             //arch.useDelimiter("[\\n\\r\\,\\s,;]+");
-            String certificacion = datos[2];System.out.println(certificacion);
+            String certificacion = datos[2];
             //arch.useDelimiter("[\\n\\r\\,;]+");
-            String duracion = datos[3];System.out.println(duracion);
-            String generos = datos[4];System.out.println(generos);
+            String duracion = datos[3];
+            String generos = datos[4];
             listaGeneros = generos.split("[\\|;]+");
-            float IMDB_Rating =Float.parseFloat(datos[5]);System.out.println(IMDB_Rating);
-            String argumento = datos[6];System.out.println(argumento);
-            String Star1 = datos[7];System.out.println(Star1);
-            String Star2 = datos[8];System.out.println(Star1);
-            String Star3 = datos[9];System.out.println(Star3);
-            String Star4 = datos[10];System.out.println(Star4);
-            String botos = datos[11];System.out.println(botos);
+            float IMDB_Rating =Float.parseFloat(datos[5]);
+            String argumento = datos[6];
+            String Star1 = datos[7];
+            String Star2 = datos[8];
+            String Star3 = datos[9];
+            String Star4 = datos[10];
+            String votos = datos[11];
             for(int i = 0; i<listaGeneros.length; i++){
                 if(!tabla.containsKey(listaGeneros[i])){
                     Genero genero = new Genero(listaGeneros[i]);
